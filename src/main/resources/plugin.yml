@@ -1,7 +1,8 @@
-name: Devathon Project
-description: A project for the Devathon contest
-version: 1.0.0
-author: Your Name Here
-
-main: org.devathon.contest2016.DevathonPlugin
-
+name: VendingMachines
+main: org.devathon.contest2016.VendingMachines
+version: 1.0
+commands:
+ createVendingMachine:
+  usage: /<command>
+  description: Command to create vending machines.
+  permission: VendingMachines.create
