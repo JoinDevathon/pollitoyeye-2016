@@ -21,7 +21,6 @@ public class VendingMachines extends JavaPlugin{
 	public static HashMap<String,HashMap<Integer,SlotData>> loadedSlotsData = new HashMap<String,HashMap<Integer,SlotData>>();
 	public void onEnable(){
 		pl = this;
-		saveDefaultConfig();
 		mManager = new MachineManager();
 		eManager = new EconomyManager();
 		Bukkit.getPluginManager().registerEvents(new EventListener(), this);
