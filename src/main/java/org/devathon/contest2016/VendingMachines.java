@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -63,7 +64,10 @@ public class VendingMachines extends JavaPlugin{
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(command.getName().equalsIgnoreCase("createVendingMachine")){
 			if(sender instanceof Player){
-				mManager.placeVendingMachine(((Player) sender).getLocation().getBlock());
+				Block bl = ((Player) sender).getLocation().getBlock();
+				if(bl != null){
+					mManager.placeVendingMachine(bl);
+				}
 				sender.sendMessage(pluginPrefix + ChatColor.AQUA + "A machine was created at your location.");
 			}else{
 				sender.sendMessage(pluginPrefix + ChatColor.RED + "You must be a player to use this command.");
