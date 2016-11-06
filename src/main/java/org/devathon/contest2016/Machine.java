@@ -198,6 +198,11 @@ public class Machine {
 				blLoc.getBlock().setType(Material.AIR);
 			}
 		}
+		for(Player p : VendingMachines.currentMachineMap.keySet()){
+			if(VendingMachines.currentMachineMap.get(p) == this){
+				p.closeInventory();
+			}
+		}
 		mainStand.remove();
 		VendingMachines.machinesMap.remove(uuid);
 		if(VendingMachines.loadedSlotsData.containsKey(uuid)){
