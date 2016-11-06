@@ -135,7 +135,7 @@ public class Machine {
 				int actionSlot = slot - (slot > 4 ? 1 : 0);
 				SlotData d = slotsData.get((Integer) actionSlot);
 				int currentMoney = VendingMachines.getEconomyManager().getCurrentMoney(p);
-				if(currentMoney > d.getPrice()){
+				if(currentMoney >= d.getPrice()){
 					VendingMachines.getEconomyManager().withdrawMoney(p,d.getPrice());
 					p.sendMessage(VendingMachines.getPluginPrefix() + ChatColor.GREEN + "You bought an item from the machine.");
 					p.getInventory().addItem(d.getDisplayItem());
