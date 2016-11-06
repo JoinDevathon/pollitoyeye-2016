@@ -1,10 +1,8 @@
-﻿---------------------------------------------Vending Machines------------------------------------------
-commands:
+##Vending Machines
  createVendingMachine:
   usage: /<command>
   description: Command to create vending machines.
   permission: VendingMachines.create
-
 Example video:
 https://www.youtube.com/watch?v=KVVEMTFtj9g
 --------------------------------------------------------------------------------------------------------
